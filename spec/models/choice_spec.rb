@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Choice, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Associations" do
+    it "belongs_to question" do
+      relation = described_class.reflect_on_association(:question)
+      expect(relation.macro).to eq :belongs_to
+    end
+  end
 end
