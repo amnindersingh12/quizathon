@@ -19,12 +19,12 @@ RSpec.describe Question, type: :model do
   end
 
   describe "Validates" do
-
-context "with valid text" do
+    let(:quiz) {build(:quiz,id: 2)}
+    context "with valid text" do
       it { expect(build(:question)).to be_valid }
-end
-context "with invalid text" do
+    end
+    context "with invalid text" do
       it { expect(build(:question,text: nil)).to be_valid }
-end
+    end
   end
 end

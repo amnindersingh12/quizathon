@@ -1,8 +1,6 @@
 FactoryBot.define do
   factory :question do
-      association :quiz, factory: :quiz
-
-    quiz_id {2}
+    quiz
     text {"hey, who's there?"}
     points {12}
     position {3}
